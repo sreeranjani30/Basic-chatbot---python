@@ -1,0 +1,22 @@
+def chatbot():
+    responses = {
+        "hello": "Hi there!",
+        "hi": "Hello!",
+        "how are you": "I'm fine, thanks! How can I help you?",
+        "bye": "Goodbye! Have a great day!",
+        "goodbye": "See you soon!",
+        "see you": "Take care!"
+    }
+
+    print("Chatbot: Hello! Type something (type 'bye' to exit).")
+
+    while True:
+        user_input = input("You: ").lower().strip()
+        if user_input in responses:
+            print("Chatbot:", responses[user_input])
+            if user_input in ["bye", "goodbye", "see you"]:
+                break
+        else:
+            print("Chatbot: Sorry, I don't understand that.")
+
+chatbot()
